@@ -1,4 +1,4 @@
-# Typecraft's Crucible 🛠️
+# my arch+gnome setup 🛠️
 
 An Arch Linux System Tool that automates the setup and configuration of an Arch Linux system with Gnome. It installs and configures packages, desktop environments, and various utilities to create a fully functional development environment.
 
@@ -30,7 +30,7 @@ An Arch Linux System Tool that automates the setup and configuration of an Arch 
 1. Clone this repository:
 
 ```bash
-git clone https://github.com/typecraft-dev/crucible.git
+git clone https://github.com/madhur-dhama/archnome.git
 ```
 
 2. Run the setup script:
