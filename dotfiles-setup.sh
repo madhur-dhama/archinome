@@ -26,7 +26,7 @@ fi
 # Check if the clone was successful
 if [ $? -eq 0 ]; then
   cd "$REPO_NAME"
-  stow bash
+  stow bashrc
   stow nvim
   stow ghostty
   stow starship
