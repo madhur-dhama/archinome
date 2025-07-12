@@ -29,3 +29,5 @@ done
 
 # Now load settings from dconf file
 dconf load /org/gnome/shell/extensions/ < "$SCRIPT_DIR/gnome-settings.dconf"
+# Now load keybinds from dconf file
+dconf load /org/gnome/settings-daemon/plugins/media-keys/ < gnome-keybinds.dconf
