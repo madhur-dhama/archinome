@@ -52,55 +52,6 @@ sigma=30
 [ding]
 check-x11wayland=true
 
-[forge]
-css-last-update=uint32 37
-focus-border-toggle=true
-move-pointer-focus-enabled=true
-window-gap-size=uint32 2
-window-gap-size-increment=uint32 2
-
-[forge/keybindings]
-con-split-horizontal=['<Super>z']
-con-split-layout-toggle=['<Super>g']
-con-split-vertical=['<Super>v']
-con-stacked-layout-toggle=['<Shift><Super>s']
-con-tabbed-layout-toggle=['<Shift><Super>t']
-con-tabbed-showtab-decoration-toggle=['<Control><Alt>y']
-focus-border-toggle=['<Super>x']
-mod-mask-mouse-tile='None'
-prefs-tiling-toggle=['<Super>w']
-window-focus-down=['<Super>j']
-window-focus-left=['<Super>h']
-window-focus-right=['<Super>l']
-window-focus-up=['<Super>k']
-window-gap-size-decrease=['<Control><Super>minus']
-window-gap-size-increase=['<Control><Super>plus']
-window-move-down=['<Shift><Super>j']
-window-move-left=['<Shift><Super>h']
-window-move-right=['<Shift><Super>l']
-window-move-up=['<Shift><Super>k']
-window-resize-bottom-decrease=['<Shift><Control><Super>i']
-window-resize-bottom-increase=['<Control><Super>u']
-window-resize-left-decrease=['<Shift><Control><Super>o']
-window-resize-left-increase=['<Control><Super>y']
-window-resize-right-decrease=['<Shift><Control><Super>y']
-window-resize-right-increase=['<Control><Super>o']
-window-resize-top-decrease=['<Shift><Control><Super>u']
-window-resize-top-increase=['<Control><Super>i']
-window-snap-center=['<Control><Alt>c']
-window-snap-one-third-left=['<Control><Alt>d']
-window-snap-one-third-right=['<Control><Alt>g']
-window-snap-two-third-left=['<Control><Alt>e']
-window-snap-two-third-right=['<Control><Alt>t']
-window-swap-down=['<Control><Super>j']
-window-swap-last-active=['<Super>Return']
-window-swap-left=['<Control><Super>h']
-window-swap-right=['<Control><Super>l']
-window-swap-up=['<Control><Super>k']
-window-toggle-always-float=['<Shift><Super>c']
-window-toggle-float=['<Super>c']
-workspace-active-tile-toggle=['<Shift><Super>w']
-
 [just-perfection]
 accessibility-menu=false
 activities-button=true
@@ -169,12 +120,6 @@ open-menu=@as []
 [space-bar/state]
 version=32
 
-[switcher]
-icon-size=uint32 23
-launcher-stats='{"org.gnome.Calendar.desktop":1,"code.desktop":1,"firefox_firefox.desktop":1}'
-show-switcher=['<Super>Space']
-workspace-indicator=true
-
 [tactile]
 col-0=2
 col-1=1
@@ -184,30 +129,3 @@ gap-size=4
 row-0=1
 row-1=1
 row-2=0
-
-[tiling-assistant]
-active-window-hint-color='rgb(211,70,21)'
-disable-tile-groups=true
-enable-tiling-popup=false
-last-version-installed=48
-tiling-popup-all-workspace=true
-
-[tilingshell]
-enable-autotiling=true
-enable-window-border=true
-last-version-name-installed='16.1'
-layouts-json='[{"id":"Layout 1","tiles":[{"x":0,"y":0,"width":0.22,"height":0.5,"groups":[1,2]},{"x":0,"y":0.5,"width":0.22,"height":0.5,"groups":[1,2]},{"x":0.22,"y":0,"width":0.56,"height":1,"groups":[2,3]},{"x":0.78,"y":0,"width":0.22,"height":0.5,"groups":[3,4]},{"x":0.78,"y":0.5,"width":0.22,"height":0.5,"groups":[3,4]}]},{"id":"Layout 2","tiles":[{"x":0,"y":0,"width":0.22,"height":1,"groups":[1]},{"x":0.22,"y":0,"width":0.56,"height":1,"groups":[1,2]},{"x":0.78,"y":0,"width":0.22,"height":1,"groups":[2]}]},{"id":"Layout 3","tiles":[{"x":0,"y":0,"width":0.33,"height":1,"groups":[1]},{"x":0.33,"y":0,"width":0.67,"height":1,"groups":[1]}]},{"id":"Layout 4","tiles":[{"x":0,"y":0,"width":0.67,"height":1,"groups":[1]},{"x":0.67,"y":0,"width":0.33,"height":1,"groups":[1]}]}]'
-move-window-right=['']
-overridden-settings='{}'
-selected-layouts=[['Layout 1'], ['Layout 1'], ['Layout 1'], ['Layout 1'], ['Layout 1'], ['Layout 1']]
-window-border-width=uint32 1
-
-[tophat]
-meter-fg-color='#e920a3'
-mount-to-monitor='/'
-network-usage-unit='bits'
-show-animations=true
-show-cpu=true
-show-disk=true
-show-icons=false
-show-mem=true
