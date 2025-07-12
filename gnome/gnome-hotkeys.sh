@@ -24,3 +24,8 @@ gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-6 "['<Super>6
 # Alt+F4 is very cumbersome
 gsettings set org.gnome.desktop.wm.keybindings close "['<Super>w']"
 
+gsettings set org.gnome.desktop.wm.keybindings switch-input-source "[]"
+gsettings set org.gnome.desktop.wm.keybindings switch-input-source-backward "[]"
+
+# Load custom keybindings from dconf file
+dconf load /org/gnome/settings-daemon/plugins/media-keys/ < "$SCRIPT_DIR/keybinds.dconf"
