@@ -122,7 +122,7 @@ else
   echo "Installing Gnome extensions..."
   . gnome/gnome-extensions.sh
   echo "Setting Gnome keybinds..."
-  . gnome/gnome-keybinds.sh
+  . gnome/gnome-binds.sh
   echo "Configuring Gnome..."
   . gnome/gnome-settings.sh
   
