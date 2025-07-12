@@ -1,1 +1,14 @@
-#custom keybinds
+#custom keybinds dconf
+
+[/]
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom- keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/ custom-keybindings/custom1/']
+
+[custom-keybindings/custom0] 
+binding='<Super>space' 
+command='ulauncher' 
+name='ulauncher'
+
+[custom-keybindings/custom1] 
+binding='<Super>b' 
+command='flatpak run app.zen_browser.zen' 
+name='zen browser'
