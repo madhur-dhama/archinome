@@ -121,8 +121,8 @@ else
   # Install gnome specific things to make it like a tiling WM
   echo "Installing Gnome extensions..."
   . gnome/gnome-extensions.sh
-  echo "Setting Gnome hotkeys..."
-  . gnome/gnome-hotkeys.sh
+  echo "Setting Gnome keybinds..."
+  . gnome/gnome-keybinds.sh
   echo "Configuring Gnome..."
   . gnome/gnome-settings.sh
   
