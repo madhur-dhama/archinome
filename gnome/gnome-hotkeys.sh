@@ -28,4 +28,4 @@ gsettings set org.gnome.desktop.wm.keybindings switch-input-source "[]"
 gsettings set org.gnome.desktop.wm.keybindings switch-input-source-backward "[]"
 
 # Load custom keybinds from dconf file
-dconf load /org/gnome/settings-daemon/plugins/media-keys/ < "$SCRIPT_DIR/keybinds.dconf"
+dconf load /org/gnome/settings-daemon/plugins/media-keys/ < "$SCRIPT_DIR/custom-binds.dconf"
