@@ -32,7 +32,7 @@ if [ $? -eq 0 ]; then
   rm     $HOME/.bashrc
   rm -rf $HOME/.config/ghostty
   rm -rf $HOME/.config/nvim
-  rm     $HOME/.config/starshim.toml
+  rm     $HOME/.config/starship.toml
 
   # Now apply stow
   stow bashrc
