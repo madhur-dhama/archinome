@@ -28,11 +28,10 @@ if [ $? -eq 0 ]; then
 
   # Remove pre-existing config files/directories before stow
   echo "Removing pre-existing config files..."
-
-  rm -f "$HOME/.bashrc" || { echo "Failed to remove .bashrc"; exit 1; }
-  rm -rf "$HOME/.config/ghostty" || { echo "Failed to remove ghostty"; exit 1; }
-  rm -rf "$HOME/.config/nvim" || { echo "Failed to remove nvim"; exit 1; }
-  rm -f "$HOME/.config/starship.toml" || { echo "Failed to remove starship.toml"; exit 1; }
+  rm -f  $HOME/.bashrc
+  rm -rf $HOME/.config/ghostty
+  rm -rf $HOME/.config/nvim
+  rm -f  $HOME/.config/starship.toml
 
   # Now apply stow
   stow bashrc
