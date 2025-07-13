@@ -14,8 +14,8 @@ print_logo() {
   ███    █▀    ███    ███ ████████▀    ███    █▀    █▀    ▀█   █▀   ▀██████▀   ▀█   ███   █▀    ██████████ 
                ███    ███                                                                                                                                                       
 
-     Archinome - Arch Linux System Crafting Tool      
-            by madhur dhama                        
+                                 archinome - Arch Linux System Crafting Tool      
+                                             by madhur dhama                        
 
 
 EOF
