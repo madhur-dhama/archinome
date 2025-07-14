@@ -108,8 +108,8 @@ else
   echo "Installing media packages..."
   install_packages "${MEDIA[@]}"
   
-  #echo "Installing fonts..."
-  #install_packages "${FONTS[@]}"
+  echo "Installing fonts..."
+  install_packages "${FONTS[@]}"
   
   # Enable services
   #echo "Configuring services..."
