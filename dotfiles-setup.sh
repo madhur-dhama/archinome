@@ -34,10 +34,7 @@ if [ $? -eq 0 ]; then
   rm -f  $HOME/.config/starship.toml
 
   # Now apply stow
-  stow bashrc
-  stow nvim
-  stow ghostty
-  stow starship
+  stow */
 else
   echo "Failed to clone the repository."
   exit 1
