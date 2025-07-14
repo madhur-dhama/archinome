@@ -13,7 +13,7 @@ An Arch Linux System Tool that automates the setup and configuration of an Arch 
   - Office applications
   - Media packages
   - Fonts
-- 🛠️ Automatic installation of yay AUR helper
+- 🛠️ Automatic installation of paru AUR helper
 - 🖥️ GNOME desktop environment setup with tiling-like features
 - 🎮 Flatpak integration for specific applications
 - ⚙️ Automatic service configuration
@@ -33,7 +33,7 @@ An Arch Linux System Tool that automates the setup and configuration of an Arch 
 git clone https://github.com/madhur-dhama/archinome.git
 ```
 
-2. Run the setup script:
+2. cd archinome and run the setup script:
 
 ```bash
 ./run.sh
