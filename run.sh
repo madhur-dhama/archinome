@@ -99,8 +99,8 @@ else
   echo "Installing system maintenance tools..."
   install_packages "${MAINTENANCE[@]}"
   
-  echo "Installing desktop environment..."
-  install_packages "${DESKTOP[@]}"
+  #echo "Installing desktop environment..."
+  #install_packages "${DESKTOP[@]}"
   
   echo "Installing desktop environment..."
   install_packages "${OFFICE[@]}"
@@ -108,19 +108,19 @@ else
   echo "Installing media packages..."
   install_packages "${MEDIA[@]}"
   
-  echo "Installing fonts..."
-  install_packages "${FONTS[@]}"
+  #echo "Installing fonts..."
+  #install_packages "${FONTS[@]}"
   
   # Enable services
-  echo "Configuring services..."
-  for service in "${SERVICES[@]}"; do
-    if ! systemctl is-enabled "$service" &> /dev/null; then
-      echo "Enabling $service..."
-      sudo systemctl enable "$service"
-    else
-      echo "$service is already enabled"
-    fi
-  done
+  #echo "Configuring services..."
+  #for service in "${SERVICES[@]}"; do
+  #  if ! systemctl is-enabled "$service" &> /dev/null; then
+  #    echo "Enabling $service..."
+  #    sudo systemctl enable "$service"
+  #  else
+  #    echo "$service is already enabled"
+  #  fi
+  #done
   
   # Install gnome specific things to make it like a tiling WM
   echo "Installing Gnome extensions..."
