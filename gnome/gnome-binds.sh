@@ -24,6 +24,7 @@ gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-6 "['<Super>6
 # Alt+F4 is very cumbersome
 gsettings set org.gnome.desktop.wm.keybindings close "['<Super>w']"
 
+# Unset super+space
 gsettings set org.gnome.desktop.wm.keybindings switch-input-source "[]"
 gsettings set org.gnome.desktop.wm.keybindings switch-input-source-backward "[]"
 
@@ -32,7 +33,7 @@ gsettings set org.gnome.desktop.wm.keybindings switch-input-source-backward "[]"
 
 # Configure custom0 (Super + Space for ulauncher)
 #gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybindings:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ name "ulauncher"
-#gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybindings:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ command "ulauncher"
+#gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybindings:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ command "ulauncher-toggle"
 #gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybindings:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ binding "['<Super>space']"
 
 # Configure custom1 (Super + B for Zen Browser)
