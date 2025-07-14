@@ -58,26 +58,26 @@ fi
 echo "Updating system..."
 sudo pacman -Syu --noconfirm
 
-# Install yay AUR helper if not present
-if ! command -v yay &> /dev/null; then
-  echo "Installing yay AUR helper..."
+# Install paru AUR helper if not present
+if ! command -v paru &> /dev/null; then
+  echo "Installing paru AUR helper..."
   sudo pacman -S --needed git base-devel --noconfirm
-  if [[ ! -d "yay" ]]; then
-    echo "Cloning yay repository..."
+  if [[ ! -d "paru" ]]; then
+    echo "Cloning paru repository..."
   else
-    echo "yay directory already exists, removing it..."
-    rm -rf yay
+    echo "paru directory already exists, removing it..."
+    rm -rf paru
   fi
 
-  git clone https://aur.archlinux.org/yay.git
+  git clone https://aur.archlinux.org/paru.git
 
-  cd yay
-  echo "building yay.... yaaaaayyyyy"
+  cd paru
+  echo "building paru........."
   makepkg -si --noconfirm
   cd ..
-  rm -rf yay
+  rm -rf paru
 else
-  echo "yay is already installed"
+  echo "paru is already installed"
 fi
 
 # Install packages by category
