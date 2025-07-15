@@ -2,6 +2,7 @@ FLATPAKS=(
   "app.zen_browser.zen"
   "io.missioncenter.MissionCenter"
   "com.visualstudio.code"
+  "org.onlyoffice.desktopeditors"
 )
 
 for pak in "${FLATPAKS[@]}"; do
