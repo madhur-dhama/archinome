@@ -90,6 +90,7 @@ backup_and_remove "$HOME/.bashrc"
 backup_and_remove "$HOME/.config/kitty"
 backup_and_remove "$HOME/.config/nvim"
 backup_and_remove "$HOME/.config/starship.toml"
+backup_and_remove "$HOME/.config/hypr"
 
 # Check if there are any stow packages to install
 if [ -z "$(find . -maxdepth 1 -type d -name "*" ! -name "." ! -name ".git" ! -name ".github" 2>/dev/null)" ]; then
