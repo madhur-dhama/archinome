@@ -102,8 +102,8 @@ else
   #echo "Installing desktop environment..."
   #install_packages "${DESKTOP[@]}"
   
-  echo "Installing desktop environment..."
-  install_packages "${OFFICE[@]}"
+  #echo "Installing desktop environment..."
+  #install_packages "${OFFICE[@]}"
   
   echo "Installing media packages..."
   install_packages "${MEDIA[@]}"
