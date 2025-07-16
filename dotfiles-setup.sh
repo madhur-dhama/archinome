@@ -29,9 +29,11 @@ if [ $? -eq 0 ]; then
   # Remove pre-existing config files/directories before stow
   echo "Removing pre-existing config files..."
   rm -f  $HOME/.bashrc
-  rm -rf $HOME/.config/kitty/
-  rm -rf $HOME/.config/nvim/
+  rm -rf $HOME/.config/kitty
+  rm -rf $HOME/.config/nvim
+  rm -rf $HOME/.config/hypr
   rm -f  $HOME/.config/starship.toml
+  
 
   # Now apply stow
   stow */
