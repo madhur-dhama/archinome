@@ -9,7 +9,7 @@ gsettings set org.gnome.desktop.interface gtk-theme "Adwaita-dark"
 #gsettings set org.gnome.desktop.background picture-options 'zoom'
 
 # Diaplay scale to 125%
-gsettings set org.gnome.desktop.interface text-scaling-factor 1.25
+#gsettings set org.gnome.desktop.interface text-scaling-factor 1.25
 
 # Enable ulauncher at startup 
 systemctl --user enable --now ulauncher
