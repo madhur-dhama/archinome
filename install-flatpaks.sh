@@ -1,3 +1,6 @@
+#!/bin/bash
+set -e
+
 FLATPAKS=(
   "app.zen_browser.zen"
   "io.missioncenter.MissionCenter"

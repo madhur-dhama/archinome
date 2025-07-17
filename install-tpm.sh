@@ -1,6 +1,7 @@
 #!/bin/bash
 
 set -e
+#TPM (Tmux Plugin Manager) 
 
 if ! pacman -Q tmux &>/dev/null; then
   echo "tmux is not installed."
