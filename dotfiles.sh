@@ -39,9 +39,9 @@ trap cleanup EXIT
 # Check dependencies
 if ! is_stow_installed; then
     log_error "GNU Stow is not installed. Please install it first:"
+    echo "  - Arch: sudo pacman -S stow"
     echo "  - Ubuntu/Debian: sudo apt install stow"
     echo "  - macOS: brew install stow"
-    echo "  - Arch: sudo pacman -S stow"
     exit 1
 fi
 
@@ -70,27 +70,17 @@ else
     cd "$REPO_NAME"
 fi
 
-# Create backup directory with timestamp
-BACKUP_DIR="$HOME/.dotfiles_backup_$(date +%Y%m%d_%H%M%S)"
-mkdir -p "$BACKUP_DIR"
+# Remove any existing files that might conflict (fresh install cleanup)
+log_info "Removing any existing config files..."
+rm -f "$HOME/.bashrc" 2>/dev/null || true
+rm -f "$HOME/.config/starship.toml" 2>/dev/null || true
+rm -rf "$HOME/.config/kitty" 2>/dev/null || true
+rm -rf "$HOME/.config/nvim" 2>/dev/null || true
+rm -rf "$HOME/.config/hypr" 2>/dev/null || true
+rm -rf "$HOME/.config/ghostty" 2>/dev/null || true
 
-# Function to backup and remove files
-backup_and_remove() {
-    local file="$1"
-    if [ -e "$file" ] || [ -L "$file" ]; then
-        log_info "Backing up $file to $BACKUP_DIR"
-        cp -r "$file" "$BACKUP_DIR/" 2>/dev/null || true
-        rm -rf "$file"
-    fi
-}
-
-# Remove/backup pre-existing config files/directories before stow
-log_info "Backing up and removing pre-existing config files..."
-backup_and_remove "$HOME/.bashrc"
-backup_and_remove "$HOME/.config/kitty"
-backup_and_remove "$HOME/.config/nvim"
-backup_and_remove "$HOME/.config/starship.toml"
-backup_and_remove "$HOME/.config/hypr"
+# Create .config directory if it doesn't exist
+mkdir -p "$HOME/.config"
 
 # Check if there are any stow packages to install
 if [ -z "$(find . -maxdepth 1 -type d -name "*" ! -name "." ! -name ".git" ! -name ".github" 2>/dev/null)" ]; then
@@ -100,15 +90,8 @@ fi
 
 # Apply stow
 log_info "Applying stow configuration..."
-if stow --verbose=2 */; then
+if stow */; then
     log_info "Dotfiles installation completed successfully!"
-    log_info "Backup created at: $BACKUP_DIR"
-    
-    # Check if backup directory is empty and remove it
-    if [ -z "$(ls -A "$BACKUP_DIR")" ]; then
-        rmdir "$BACKUP_DIR"
-        log_info "No files were backed up, backup directory removed"
-    fi
 else
     log_error "Stow failed. Check for conflicts or missing directories."
     exit 1
@@ -121,4 +104,4 @@ if [ -f "$HOME/.bashrc" ]; then
     source "$HOME/.bashrc" || log_warn "Failed to source .bashrc"
 fi
 
-log_info "Installation complete! You may need to restart your terminal or run 'source ~/.bashrc'"
+log_info "Installation complete"
