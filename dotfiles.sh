@@ -82,12 +82,6 @@ rm -rf "$HOME/.config/ghostty" 2>/dev/null || true
 # Create .config directory if it doesn't exist
 mkdir -p "$HOME/.config"
 
-# Check if there are any stow packages to install
-if [ -z "$(find . -maxdepth 1 -type d -name "*" ! -name "." ! -name ".git" ! -name ".github" 2>/dev/null)" ]; then
-    log_error "No stow packages found in the repository"
-    exit 1
-fi
-
 # Apply stow
 log_info "Applying stow configuration..."
 if stow */; then
